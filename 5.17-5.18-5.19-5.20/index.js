@@ -1,3 +1,4 @@
+
 // const openModalBtn = document.getElementById("openModalBtn");
 // const modal = document.getElementById("modal");
 // const closeModalBtn = document.getElementById("closeModalBtn");
@@ -27,7 +28,8 @@
 //     modal.style.display = "none";
 //     detachModalEvents();
 //   }
-// });  
+// });
+
 
 /// 5.19 ///
 

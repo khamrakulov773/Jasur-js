@@ -1,3 +1,5 @@
+
+/// 5.14 ///
 document.getElementById("myForm").addEventListener("submit", function (event) {
   event.preventDefault(); // Предотвращаем стандартное поведение отправки формы
 

@@ -86,9 +86,9 @@
 
 //0 false null undefined '' NaN
 
-if(-1){
-    console.log("it's positive");
-}else{
-    console.log("it's negative");
-}
+// if(-1){
+//     console.log("it's positive");
+// }else{
+//     console.log("it's negative");
+// }
 
