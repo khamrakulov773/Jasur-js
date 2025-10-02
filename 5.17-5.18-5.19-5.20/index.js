@@ -49,8 +49,11 @@
 //     localStorage.setItem("tasks", JSON.stringify(tasks));
 //   };
 
+
 //   const tasks = loadTasks();
 
+
+  
 //   const renderTasks = () => {
 //     const tasksHtml = tasks
 //       .map((task) => {
