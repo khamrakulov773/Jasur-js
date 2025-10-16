@@ -7,8 +7,8 @@
 // let regexpFlag2 = /^[а-яА-Я]*$/gmi;
 
 
-//  let str = 'my name Jasur. my full name is Jasur Khamrakulov';
-//  console.log(str.replace(/Jasur/i, "JUSTIN#"));
+//  let str = 'my name Jasur. my full \n name is Jasur Khamrakulov';
+//  console.log(str.replace(/jasur/igm, "JUSTIN#"));
 
 //  let str = 'my name Jasur. my full name is Jasur Khamrakulov';
 //  console.log(str.replace(/Jasur/gi, "JUSTIN#"));

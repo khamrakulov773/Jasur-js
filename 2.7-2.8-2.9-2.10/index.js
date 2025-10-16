@@ -1,4 +1,5 @@
 // function bark() {
+    // console.log(this);
 // console.log(`${this.name} лает: Гав!`);
 // }
 
@@ -8,6 +9,27 @@
 //     breed: "корги",
 //     bark: bark,
 //    };
+
+  
+//    let obj = {
+//     name : 'damir',
+//     age: 16,
+//     id: 107890,
+//     getInfo: fullInfo,
+//    }
+   
+
+
+// function fullInfo()  {
+    // console.log(this.name);
+    // console.log(this.age);
+    // console.log(this.id);
+    // console.log(obj.name);
+    // console.log(obj.age);
+    // console.log(obj.id);
+// }
+
+//    obj.getInfo()
 
 // const dog2 = {
 //     name:"Бобик", 
@@ -19,24 +41,24 @@
 // dog2.bark()
 
 
-function getArea() {
-    return this.width * this.height;
-}
+// function getArea() {
+//     return this.width * this.height;
+// }
 
 
-function getPerimeter() {
-    return this.width * 2 + this.height * 2;
-}
+// function getPerimeter() {
+//     return this.width * 2 + this.height * 2;
+// }
 
-const square1 = {
-    width: 4,
-    height: 5,
-    getArea: getArea,
-    getPerimeter: getPerimeter,
-};
+// const square1 = {
+//     width: 4,
+//     height: 5,
+//     getArea: getArea,
+//     getPerimeter: getPerimeter,
+// };
 
-console.log(square1.getArea());
-console.log(square1.getPerimeter());
+// console.log(square1.getArea());
+// console.log(square1.getPerimeter());
 
 
 // const square2 = {
@@ -86,7 +108,7 @@ console.log(square1.getPerimeter());
 
 // let userName = 'Alexei';
 
-// let str = `My name  is alexey`;
+// let str = `My name  is Alexei`;
 
 // console.log(
 //     `The string "${userName}" ${
@@ -158,7 +180,7 @@ console.log(square1.getPerimeter());
 // console.log(email1.trim() === email2.trim());
 
 
-
+// 
 // const products = [
 //     'Яйцо столовое',
 //     'молоко молочник',
@@ -454,26 +476,25 @@ console.log(reverseArray);
 
 
 
-const students = [
-    ["сергей лобанов", 3, 521301],
-    ["сергей лобанов", 4, 521401],
-    ["сергей лобанов", 2, 521201],
-    ["сергей лобанов", 1, 521101],
-];
+// const students = [
+//     ["сергей лобанов", 3, 521301],
+//     ["сергей лобанов", 4, 521401],
+//     ["сергей лобанов", 2, 521201],
+//     ["сергей лобанов", 1, 521101],
+// ];
 
-for (const item of students) {
-    for (const element of item) {
-        let index = item.indexOf(element);
-        if (index === 0) {
-            console.log(`студент: ${element}`);
-        } else if (index === 1) {
-            console.log(`\t Курс: ${element}`);
-        }else {
-            console.log(`\t гуппа: ${element}`);
-        }
-
-    }
-}
+// for (const item of students) {
+//     for (const element of item) {
+//         let index = item.indexOf(element);
+//         if (index === 0) {
+//             console.log(`студент: ${element}`);
+//         } else if (index === 1) {
+//             console.log(`\t Курс: ${element}`);
+//         }else {
+//             console.log(`\t гуппа: ${element}`);
+//         }
+//     }
+// }
 
 
 
@@ -500,4 +521,4 @@ for (const item of students) {
             
 //         }
 //     }
-// }
+// }   
