@@ -24,7 +24,7 @@
 
 // let nameUser = prompt('Введите ваше имя на кирилице');
 
-// if (regexp.test()) {
+// if (regexp.test(nameUser)) {
 //     alert("ваше имя сохранено")
 // }else {
 //     alert("введены некорртиные символ");
@@ -35,13 +35,12 @@
 //     "Иванов А.А.",
 //     "Иванова В.В.",
 //     "Ивановский Г.Г.",
-//     "Ивановский Г.Г.",
 //     "Иванченко Д.Д.",
 // ];
 
 // let person = prompt("Введите фамилю");
 
-// let regexp = new RegExp(`${person}`)
+// let regexp = new RegExp(`${person}`,  'i')
 
 // families.forEach((el) => {
 //     if(regexp.test(el)) {
@@ -51,6 +50,8 @@
 
 
 // let regexp = /^П/;
+// let regexp = /^П/i;
+// let regexp = /^П/gi;
 // console.log(regexp.test('Пирог'));
 // console.log(regexp.test('Вкусный пирог'));
 // console.log(regexp.test('пирон'));
@@ -72,17 +73,14 @@
 
 
 // let regexp = /^[а-яА-Я]*$/;
-// console.log(regexp.test(""));
-// console.log(regexp.test("Abc"));
-// console.log(regexp.test("АбвAbc"));
-// console.log(regexp.test("Абв"));
-
-
 // let regexp = /^[а-яА-Я]+$/;
+
 // console.log(regexp.test(""));
 // console.log(regexp.test("Abc"));
 // console.log(regexp.test("АбвAbc"));
 // console.log(regexp.test("Абв"));
+
+
 
 
 // let regexp = /[0-9]{6}/;
@@ -115,8 +113,10 @@
 
 
 // function noReturn() {
-    
+
 // }
+
+
 // let result = noReturn();
 // console.log(result);
 
@@ -157,7 +157,7 @@
 // function sumArray(arr) {
 //     let sum = 0;
 //     for (let index = 0; index < arr.length; index++) {
-//     sum += arr[index];    
+//         sum += arr[index];
 //     }
 //     return sum;
 // }
@@ -173,4 +173,3 @@
 
 
 
- 
