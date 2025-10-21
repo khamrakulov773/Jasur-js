@@ -1,10 +1,10 @@
 /// 6.5///
 
-const fn = async () => {
-    return 1;
-};
+// const fn = async () => {
+//     return 1;
+// };
 
-console.log(fn());
+// console.log(fn());
 
 
 // const fn = async () => {
@@ -126,154 +126,154 @@ console.log(fn());
 
 /// 6.8 ///
 
-// const loader = document.getElementById("loader");
+const loader = document.getElementById("loader");
 
-// async function fetchData(url, errorMessage) {
-//     try {
-//         loader.style.display = "block";
-//         const response = await fetch(url);
+async function fetchData(url, errorMessage) {
+    try {
+        loader.style.display = "block";
+        const response = await fetch(url);
 
-//         if (!response.ok) {
-//             throw new Error(`Данные не получены. Статус: ${response.status}`);
-//         }
+        if (!response.ok) {
+            throw new Error(`Данные не получены. Статус: ${response.status}`);
+        }
 
-//         const data = await response.json();
+        const data = await response.json();
 
-//         console.log("Данные получены:", data);
-//         return data;
-//     } catch (error) {
-//         if (error.message === "Failed to fetch") {
-//             console.error("Ошибка: Нет подключения к интернету.");
-//         } else {
-//             console.error(`${errorMessage}`, error.message);
-//         }
-//         throw error;
-//     } finally {
-//         loader.style.display = "none";
-//     }
-// }
+        console.log("Данные получены:", data);
+        return data;
+    } catch (error) {
+        if (error.message === "Failed to fetch") {
+            console.error("Ошибка: Нет подключения к интернету.");
+        } else {
+            console.error(`${errorMessage}`, error.message);
+        }
+        throw error;
+    } finally {
+        loader.style.display = "none";
+    }
+}
 
-// async function getPosts() {
-//     const url = "https://jsonplaceholder.typicode.com/posts";
-//     const errorMessage = "Ошибка при получении постов";
-//     const result = await fetchData(url, errorMessage);
-//     return result;
-// }
+async function getPosts() {
+    const url = "https://jsonplaceholder.typicode.com/posts";
+    const errorMessage = "Ошибка при получении постов";
+    const result = await fetchData(url, errorMessage);
+    return result;
+}
 
-// async function getUsers() {
-//     const url = "https://jsonplaceholder.typicode.com/users";
-//     const errorMessage = "Ошибка при получении пользователей";
-//     const result = await fetchData(url, errorMessage);
-//     return result;
-// }
+async function getUsers() {
+    const url = "https://jsonplaceholder.typicode.com/users";
+    const errorMessage = "Ошибка при получении пользователей";
+    const result = await fetchData(url, errorMessage);
+    return result;
+}
 
-// async function getComments() {
-//     const url = "https://jsonplaceholder.typicode.com/comments123";
-//     const errorMessage = "Ошибка при получении комментариев";
-//     const result = await fetchData(url, errorMessage);
-//     return result;
-// }
+async function getComments() {
+    const url = "https://jsonplaceholder.typicode.com/comments123";
+    const errorMessage = "Ошибка при получении комментариев";
+    const result = await fetchData(url, errorMessage);
+    return result;
+}
 
-// async function getData() {
-//     try {
-//         const [postsResult, usersResult, commentsResult] = await Promise.allSettled(
-//             [getPosts(), getUsers(), getComments()]
-//         );
+async function getData() {
+    try {
+        const [postsResult, usersResult, commentsResult] = await Promise.allSettled(
+            [getPosts(), getUsers(), getComments()]
+        );
 
-//         const posts = postsResult.status === "fulfilled" ? postsResult.value : [];
-//         const users = usersResult.status === "fulfilled" ? usersResult.value : [];
-//         const comments =
-//             commentsResult.status === "fulfilled" ? commentsResult.value : [];
+        const posts = postsResult.status === "fulfilled" ? postsResult.value : [];
+        const users = usersResult.status === "fulfilled" ? usersResult.value : [];
+        const comments =
+            commentsResult.status === "fulfilled" ? commentsResult.value : [];
 
-//         console.log("Посты:", postsResult);
-//         console.log("Пользователи:", usersResult);
-//         console.log("Комментарии:", commentsResult);
+        console.log("Посты:", postsResult);
+        console.log("Пользователи:", usersResult);
+        console.log("Комментарии:", commentsResult);
 
-//         const container = document.getElementById("posts-container");
+        const container = document.getElementById("posts-container");
 
-//         container.innerHTML = "";
+        container.innerHTML = "";
 
-//         if (posts.length === 0) {
-//             container.innerHTML = "<p>Нет доступных постов</p>";
-//             return;
-//         }
+        if (posts.length === 0) {
+            container.innerHTML = "<p>Нет доступных постов</p>";
+            return;
+        }
 
-//         posts.forEach((post) => {
-//             const postElement = document.createElement("div");
-//             postElement.classList.add("post");
+        posts.forEach((post) => {
+            const postElement = document.createElement("div");
+            postElement.classList.add("post");
 
-//             const titleElement = document.createElement("h2");
-//             titleElement.textContent = post.title;
+            const titleElement = document.createElement("h2");
+            titleElement.textContent = post.title;
 
-//             const bodyElement = document.createElement("p");
-//             bodyElement.textContent = post.body;
+            const bodyElement = document.createElement("p");
+            bodyElement.textContent = post.body;
 
-//             postElement.append(titleElement);
-//             postElement.append(bodyElement);
+            postElement.append(titleElement);
+            postElement.append(bodyElement);
 
-//             if (users.length > 0) {
-//                 const user = users.find((user) => user.id === post.userId);
+            if (users.length > 0) {
+                const user = users.find((user) => user.id === post.userId);
 
-//                 const userElement = document.createElement("div");
-//                 const nameElement = document.createElement("p");
-//                 nameElement.textContent = `Author: ${user.name}`;
+                const userElement = document.createElement("div");
+                const nameElement = document.createElement("p");
+                nameElement.textContent = `Author: ${user.name}`;
 
-//                 const emailElement = document.createElement("p");
-//                 emailElement.textContent = `Email: ${user.email}`;
+                const emailElement = document.createElement("p");
+                emailElement.textContent = `Email: ${user.email}`;
 
-//                 const websiteElement = document.createElement("p");
-//                 websiteElement.textContent = `Website: ${user.website}`;
+                const websiteElement = document.createElement("p");
+                websiteElement.textContent = `Website: ${user.website}`;
 
-//                 userElement.append(nameElement);
-//                 userElement.append(emailElement);
-//                 userElement.append(websiteElement);
+                userElement.append(nameElement);
+                userElement.append(emailElement);
+                userElement.append(websiteElement);
 
-//                 postElement.append(userElement);
-//             }
+                postElement.append(userElement);
+            }
 
-//             if (comments.length > 0) {
-//                 const postComments = comments.filter(
-//                     (comment) => comment.postId === post.id
-//                 );
+            if (comments.length > 0) {
+                const postComments = comments.filter(
+                    (comment) => comment.postId === post.id
+                );
 
-//                 if (postComments.length > 0) {
-//                     const commentsContainer = document.createElement("div");
-//                     commentsContainer.classList.add("comments");
+                if (postComments.length > 0) {
+                    const commentsContainer = document.createElement("div");
+                    commentsContainer.classList.add("comments");
 
-//                     const commentsTitle = document.createElement("h3");
-//                     commentsTitle.textContent = "Comments:";
-//                     commentsContainer.append(commentsTitle);
+                    const commentsTitle = document.createElement("h3");
+                    commentsTitle.textContent = "Comments:";
+                    commentsContainer.append(commentsTitle);
 
-//                     postComments.forEach((comment) => {
-//                         const commentElement = document.createElement("div");
-//                         commentElement.classList.add("comment");
+                    postComments.forEach((comment) => {
+                        const commentElement = document.createElement("div");
+                        commentElement.classList.add("comment");
 
-//                         const commentName = document.createElement("p");
-//                         commentName.textContent = `Name: ${comment.name}`;
+                        const commentName = document.createElement("p");
+                        commentName.textContent = `Name: ${comment.name}`;
 
-//                         const commentEmail = document.createElement("p");
-//                         commentEmail.textContent = `Email: ${comment.email}`;
+                        const commentEmail = document.createElement("p");
+                        commentEmail.textContent = `Email: ${comment.email}`;
 
-//                         const commentBody = document.createElement("p");
-//                         commentBody.textContent = comment.body;
+                        const commentBody = document.createElement("p");
+                        commentBody.textContent = comment.body;
 
-//                         commentElement.append(commentName);
-//                         commentElement.append(commentEmail);
-//                         commentElement.append(commentBody);
+                        commentElement.append(commentName);
+                        commentElement.append(commentEmail);
+                        commentElement.append(commentBody);
 
-//                         commentsContainer.append(commentElement);
-//                     });
+                        commentsContainer.append(commentElement);
+                    });
 
-//                     postElement.append(commentsContainer);
-//                 }
-//             }
+                    postElement.append(commentsContainer);
+                }
+            }
 
-//             container.append(postElement);
-//         });
-//     } catch (error) {
-//         console.error("Ошибка при получении данных:", error);
-//     }
-// }
+            container.append(postElement);
+        });
+    } catch (error) {
+        console.error("Ошибка при получении данных:", error);
+    }
+}
 
-// const btn = document.getElementById("button");
-// btn.addEventListener("click", getData);
+const btn = document.getElementById("button");
+btn.addEventListener("click", getData);
