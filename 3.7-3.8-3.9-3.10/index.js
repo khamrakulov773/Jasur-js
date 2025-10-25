@@ -5,13 +5,12 @@
 // someFn(); 
 
 // function factorial(n) {
-//     return n * factorial(n - 1);
+//     return  factorial(n - 1);
 // }
 // console.log(factorial(4));
 
 
 // function factorial(n) {
-
 //     if (n === 1) {
 //         return 1;
 //     }
@@ -73,9 +72,10 @@
 
 // function createMultiplier(multiplier) {
 //     console.log(multiplier);
-//     return function (number) {
-//         console.log(multiplier);
-//         return number * multiplier;
+//     return function (number = 3, multiplier = 5) {
+//         // console.log(multiplier);
+//         return console.log(number * multiplier)
+//         ;
 //     };
 // }
 
@@ -148,6 +148,7 @@
 // function createPerson(name) {
 //     let age = 17;
 //     return {
+//         name: 'shoxrux',
 //         age: 20,
 //         getName() {
 //             return name;
@@ -163,11 +164,11 @@
 
 // const person = createPerson("Alice");
 
-// console.log(person.getName());
+// console.log(person.age);
 // console.log(person.getAge());
+// console.log(person.getName());
 // person.celebrateBirthday();
 // console.log(person.getAge());
-// console.log(person.age);
 
 
 // let currentDate = new Date();
@@ -177,19 +178,17 @@
 // let myDate = new Date(1754543482)
 // console.log(myDate);
 
-// let myDate = new Date(1754543878272)
+// let myDate = new Date(1761221420 * 1000) 
 // console.log(myDate);
 
 
 
 // let myDate = +new Date();
-// let myDate = new Date(1753680914685);
+// let myDate = new Date(1761221420000).getHours();
 // console.log(myDate);
 
-// let tenDaysAgo = 10 * 24 * 60 * 60 * 1000;
-
-// let searchDate = myDate - tenDaysAgo;
-
+// let searchDate = myDate ;
+// 
 // console.log(searchDate);
 
 
@@ -201,7 +200,8 @@
 // let myDate = new Date (2024, 9, 26, 12, 30, 20, 10);
 // console.log(myDate);
 
-// let myDate = new Date (2025, 9, 45);
+// let myDate = new Date (2025, 10, 15);
+// let myDate = new Date (2025, 10, 45);
 // console.log(myDate);
 
 // let date = new Date().getDate();
@@ -266,7 +266,7 @@ console.log(
 
 // const currentDate = new Date();
 
-// const myFormattedDate = currentDate.toLocaleDateString("ru-RU", {
+// const myFormattedDate = currentDate.toLocaleDateString("ru-Ru", {
 //     weekday: "long",
 // });
 
@@ -322,14 +322,7 @@ console.log(
 
 // const myTime = new Date();
 
-// let fullTime = 
-//     "сейчас: " +
-//     myTime.getHours() +
-//     " час " + 
-//     myTime.getMinutes() +
-//     " мин " +
-//     myTime.getSeconds() +
-//     " сек ";
+// let fullTime =  "сейчас: " +  myTime.getHours() +  " час " +  myTime.getMinutes() +  " мин " +  myTime.getSeconds() +  " сек ";
 
 // console.log(fullTime);
 

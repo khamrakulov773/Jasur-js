@@ -1,6 +1,7 @@
 // const pages = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // let printPage = 0;
 
+
 // while (printPage < pages.length) {
 //     if (pages[printPage] % 2 === 1) {
 //         printPage++
@@ -10,10 +11,11 @@
 //     printPage++;
 // }
 
-
-// console.log(20%33);
+// console.log(40%25);
+// console.log(15%25);
 
 // const pages = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
 // let printPage = 0;
 
 // while (printPage < pages.length) {

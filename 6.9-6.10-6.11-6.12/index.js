@@ -1,6 +1,6 @@
 /// 6.9 ///
 
-// console.log("Start");
+// console.log("Start"); 
 
 // setTimeout(() => {
 //     console.log("Timeout");
@@ -135,9 +135,9 @@
 
 
 // const urls = [
+//     "https://jsonplaceholder.typicode.com/users",
 //     "https://jsonplaceholder.typicode.com/posts",
 //     "https://jsonplaceholder.typicode.com/comments",
-//     "https://jsonplaceholder.typicode.com/users",
 // ];
 
 // function* requestGenerator() {
@@ -163,7 +163,7 @@ const addButton = document.getElementById("add-button");
 const downloadButton = document.querySelector(".button-download");
 const overlay = document.getElementById("overlay");
 
-const host = "https://68f761a4f7fb897c66159b58.mockapi.io/api/v1/todos";
+const host = "https://68fcae0696f6ff19b9f5ef1f.mockapi.io/api/v1/todos";
 
 async function getData() {
   try {
@@ -257,7 +257,7 @@ function renderData(todos) {
 async function deleteTodo(id) {
   try {
     const response = await fetch(`${host}/${id}`, {
-      method: "DELETE",
+      method: "DELETE", 
     });
     if (!response.ok) {
       throw new Error(`Не удалось удалить задачу. Статус: ${response.status}`);
@@ -369,3 +369,185 @@ function hideLoader() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const cat = {
+//   age: 5,
+//   weight: 3,
+//   name: "Murzik",
+//   isVaccinated: true,
+// }
+
+// console.log(cat);
+
+// let isVaccinated = true;
+// const cat = {
+//   age: 5,
+//   weight: 3,
+//   name: "Murzik",
+// }
+
+// console.log(cat);
+
+
+// let isVaccinated = true;
+// let cat = {
+//   age: 5,
+//   weight: 3,
+//   name: "Murzik",
+// }
+
+// cat = 10
+
+// console.log(cat);
+
+
+// let isVaccinated = true;
+// const cat = {
+//   age: 5,
+//   weight: 3,
+//   name: "Murzik",
+// }
+
+// console.log(cat.name);
+
+
+// let isVaccinated = true;
+// const cat = {
+//   age: 5,
+//   weight: 3,
+//   name: "Murzik",
+// }
+
+// console.log(cat.age);
+
+
+// let isVaccinated = true;
+// const cat = {
+//   age: 5,
+//   weight: 3,
+//   name: "Murzik",
+// }
+
+// console.log(cat.weight);
+
+
+// let isVaccinated = true;
+// const cat = {
+//   age: 5,
+//   weight: 3,
+//   name: "Murzik",
+// }
+
+// console.log(isVaccinated);
+
+
+// let isVaccinated = true;
+// const cat = {
+//   age: 5,
+//   weight: 3,
+//   name: "Murzik",
+// }
+
+// cat.isPedigree = true
+
+// console.log(cat);
+
+
+
+// let isVaccinated = true;
+// const cat = {
+//   age: 5,
+//   weight: 3,
+//   name: "Murzik",
+//   isVaccinated: true,
+// }
+
+// delete cat.age;
+
+// console.log(cat);
+
+
+// let isVaccinated = true;
+// const cat = {
+//   age: 5,
+//   weight: 3,
+//   name: "Murzik",
+//   isVaccinated: true,
+// }
+
+
+// console.log(cat["name"]);
+
+// let isVaccinated = true;
+
+// const cat = {
+//   age: 5,
+//   weight: 3,
+//   name: "Murzik",
+//   isVaccinated: true,
+// }
+
+// delete cat["weight"];
+
+// console.log(cat["name"]);
+
+
+// let isVaccinated = true;
+// const cat = {
+//   age: 5,
+//   weight: 3,
+//   name: "Murzik",
+//   "is Vaccinated": true,
+// }
+
+
+// console.log(cat["is Vaccinated"]);
+
+
+// const user = {
+//   name: "sally",
+//   age: 16,
+//   height: 165,
+  
+// };
+
+// let info = prompt(
+//   "What do u want to know about the user?",
+//   "name, age and height"
+// );
+
+// console.log(user[info]);
