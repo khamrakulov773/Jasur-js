@@ -1,10 +1,10 @@
-//  setTimeout(() => {
+// setTimeout(() => {
+//     console.log("прошло 2 секунд");
+// }, 2000)
+
+
+// function logMessage() {
 //     console.log("прошло 5 секунд");
-//  }, 2000)
-
-
-// function logMessage(name) {
-//     console.log( "прошло 5 секунд");
 // }
 
 
@@ -72,7 +72,7 @@
 
 //  let timeId = setInterval(()=> {
 //     alert("tick");
-//  }, 2000);
+//  }, 1000);
 
 //  setTimeout(() => {
 //     clearInterval(timeId);
@@ -88,18 +88,16 @@
 
 
 
-let interval = 1000;
-
-
+// let interval = 1000;
 
 
 
 // function tick() {
 //     console.log("tick " + interval);
 //     interval += 1000;
-
 //     setTimeout(tick, interval);
 // }
+
 
 // tick()
 
@@ -109,7 +107,7 @@ let interval = 1000;
 
 //  const timer = (deadline) => {
 //     setInterval(() => {
-//     console.log(deadline);
+//     console.log(deadline--);
 //     }, 1000);
 //  }
 //  timer(3)
@@ -123,6 +121,7 @@ let interval = 1000;
 //         time -= 1;
 //         console.log(time);
 //     }, 1000);
+
 //     setTimeout (() => {
 //         clearInterval(interval);
 //         console.log("время истекло");
@@ -145,6 +144,8 @@ let interval = 1000;
 //         console.log("время истекло");
 //     }, deadline * 1000 )
 // };
+
+
 // timer("tt");
 
 
@@ -182,4 +183,3 @@ let interval = 1000;
 // console.log("разве я последний?");
 
 
-       

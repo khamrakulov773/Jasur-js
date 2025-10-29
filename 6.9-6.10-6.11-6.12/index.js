@@ -203,7 +203,7 @@ function renderData(todos) {
     textElement.style.textDecoration = todo.completed ? "line-through" : "none";
 
     const timeElement = document.createElement("p");
-    timeElement.textContent = new Date(todo.createdAt).toLocaleString("ru-RU", {
+    timeElement.textContent = new Date(todo.createdAt).toLocaleString("uz-UZ", {
       year: "numeric",
       month: "numeric",
       day: "numeric",
@@ -259,12 +259,15 @@ async function deleteTodo(id) {
     const response = await fetch(`${host}/${id}`, {
       method: "DELETE", 
     });
+  
+    
     if (!response.ok) {
       throw new Error(`Не удалось удалить задачу. Статус: ${response.status}`);
     }
 
     console.log("Задача удалена:", data);
     getData();
+
   } catch (error) {
     console.error(`Ошибка удаления:`, error.message);
   }
@@ -368,186 +371,3 @@ function hideLoader() {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const cat = {
-//   age: 5,
-//   weight: 3,
-//   name: "Murzik",
-//   isVaccinated: true,
-// }
-
-// console.log(cat);
-
-// let isVaccinated = true;
-// const cat = {
-//   age: 5,
-//   weight: 3,
-//   name: "Murzik",
-// }
-
-// console.log(cat);
-
-
-// let isVaccinated = true;
-// let cat = {
-//   age: 5,
-//   weight: 3,
-//   name: "Murzik",
-// }
-
-// cat = 10
-
-// console.log(cat);
-
-
-// let isVaccinated = true;
-// const cat = {
-//   age: 5,
-//   weight: 3,
-//   name: "Murzik",
-// }
-
-// console.log(cat.name);
-
-
-// let isVaccinated = true;
-// const cat = {
-//   age: 5,
-//   weight: 3,
-//   name: "Murzik",
-// }
-
-// console.log(cat.age);
-
-
-// let isVaccinated = true;
-// const cat = {
-//   age: 5,
-//   weight: 3,
-//   name: "Murzik",
-// }
-
-// console.log(cat.weight);
-
-
-// let isVaccinated = true;
-// const cat = {
-//   age: 5,
-//   weight: 3,
-//   name: "Murzik",
-// }
-
-// console.log(isVaccinated);
-
-
-// let isVaccinated = true;
-// const cat = {
-//   age: 5,
-//   weight: 3,
-//   name: "Murzik",
-// }
-
-// cat.isPedigree = true
-
-// console.log(cat);
-
-
-
-// let isVaccinated = true;
-// const cat = {
-//   age: 5,
-//   weight: 3,
-//   name: "Murzik",
-//   isVaccinated: true,
-// }
-
-// delete cat.age;
-
-// console.log(cat);
-
-
-// let isVaccinated = true;
-// const cat = {
-//   age: 5,
-//   weight: 3,
-//   name: "Murzik",
-//   isVaccinated: true,
-// }
-
-
-// console.log(cat["name"]);
-
-// let isVaccinated = true;
-
-// const cat = {
-//   age: 5,
-//   weight: 3,
-//   name: "Murzik",
-//   isVaccinated: true,
-// }
-
-// delete cat["weight"];
-
-// console.log(cat["name"]);
-
-
-// let isVaccinated = true;
-// const cat = {
-//   age: 5,
-//   weight: 3,
-//   name: "Murzik",
-//   "is Vaccinated": true,
-// }
-
-
-// console.log(cat["is Vaccinated"]);
-
-
-// const user = {
-//   name: "sally",
-//   age: 16,
-//   height: 165,
-  
-// };
-
-// let info = prompt(
-//   "What do u want to know about the user?",
-//   "name, age and height"
-// );
-
-// console.log(user[info]);
