@@ -295,3 +295,54 @@
 // user[info] = 'first name'
 // console.log(user);
 // console.log(user[info]);
+
+
+
+//  <------ 1,16.2 урок ------>
+
+// const users = ["jassy", "sally", "teacher"];
+
+
+// console.log(users.length);
+
+
+// console.log(users[0]);
+// console.log(users[1]);
+// console.log(users[2]);
+
+
+// console.log(users[users.length - 1]);
+
+// users[8] = "leo";
+
+// console.log(users);
+
+
+// const users = new Array ("jassy", null, "sally", "teacher");
+
+// console.log(users);
+
+// const users = new Array(4);
+
+// users[0] = 'mimi'
+// users[users.length] = 'mimi';
+
+// console.log(users);
+// console.log(users[0]);
+
+
+
+// let users = ["jassy", null, "sally", "teacher"];
+
+
+// users = [];
+// users[users.length] = 'mimi';
+// console.log(users);
+
+
+
+const users = [
+    {
+        name: "jassy"
+    }
+]

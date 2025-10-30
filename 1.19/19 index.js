@@ -4,12 +4,14 @@
 // let str1 = "новое - ";
 // let str2 = "это хорошое забытое старое ";
 // let result = str1.concat(str2);
+// let result = str1 + str2;
 // console.log(result);
 
 // let str1 = 33;
-// let str2 = "это хорошое забытое старое ";
+// let str2 = " это хорошое забытое старое ";
 // let result = str1 + str2;
 // console.log(result);
+
 
 // let result = "натуральное числа: "
 // for (let index = 1; index < 5; index++) {
@@ -18,26 +20,39 @@
 
 // console.log(result);
 
-//  let doubleQuotes = `"не тут-то было! - ответил он."`;
+
+// let n = 5
+// let n 
+
+// n += 2
+// console.log(n);
+// n += 7
+// console.log(n);
+// n += 10
+// console.log(n);
+
+
+//  let doubleQuotes = `"не тут-то 'было!' - ответил он."`;
+//  let doubleQuotes = "не тут-то было! - ответил он.";
 //  let anotherExample = `i'm a programmer`
  
 //  console.log(doubleQuotes);
 //  console.log(anotherExample);
 
-// let str =  
+// let rts =  
 // `это первая строка.
 // это вторая строка.
 // это третий строка.`
  
-// console.log(str);
+// console.log(rts);
 
 // let result = `${33 - 22 + 5 / 2}`;
 // console.log(result);
  
 // function greet() {
-//     return "привет мир ";
+//     return "привет мир";
 // }
-// let str = `результат функции: ${greet()}`;
+// let str = `результат функции: "${greet()}"`;
 // console.log(str);
 
 
@@ -50,47 +65,34 @@
 // let str = 'It is  \nsome text'
 // console.log(str);
 
-// let str = 'It is  \n xsome text'
-// console.log(str);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 // const host  = "gismeteo.ru/weather-";
 // const query = "stockholm-417";
 // // const url = "https://" + host + query + "/";
-// const url = `https://${host}${query} /"`;
+// const url = `https://${host}${query}/"`;
 
-// const linkText = `<a href=${url}>погода в этом городе</a>` ;
+// const linkText = `<a href=${url} target="_blank">погода в этом городе</a>` ;
 
 // const weatherLinkEl = document.getElementById('weather-link');
 
 // weatherLinkEl.innerHTML = linkText;
 
-
-
-
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
