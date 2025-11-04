@@ -46,9 +46,16 @@
 
 
 
+
+
+
+
+
 // const originalArray = [1, 2, 3, 4, 5];
 
-// const newArray = originalArray.slice(0, 4);
+// const newArray = originalArray.slice();
+// const newArray = originalArray;
+// newArray[0] = 77
 
 // console.log(originalArray);
 
@@ -59,7 +66,7 @@
 
 // const originalArray = [1, 2, 3, 4, 5];
 
-// const newArray = originalArray.slice(0, 4).reverse();
+// const newArray = originalArray.slice().reverse();
 
 // console.log(originalArray);
 
@@ -69,6 +76,7 @@
 
 // const originalArray = [1, 2, 3, 4, 5];
 
+// const newArray = [...originalArray];
 // const newArray = [0, ...originalArray];
 
 // console.log(originalArray);
@@ -83,6 +91,7 @@
 // console.log(originalArray);
 
 // console.log(newArray);
+
 
 
 // const person = {
@@ -104,6 +113,7 @@
 // };
 
 // const person2 = person;
+// const person2 = {...person};
 
 // person2.age = 31;
 // person2.isMarried = true; 
@@ -150,7 +160,7 @@
 //     },
 // };
 
-// const person2 = { ...person};
+// const person2 = {...person};
 // person2.params.height = 174;
 
 // console.log(person); 
@@ -183,7 +193,7 @@
 //     },
 // };
 
-// const person2 = JSON.parse(JSON.stringify (person));
+// const person2 = JSON.parse(JSON.stringify(person));
 // person2.params.height = 174;
 
 
@@ -192,16 +202,16 @@
 
 
 // const person = {
-//     name: "john",
-//     age: 30,
+//   name: "john",
+//   age: 30,
 // };
 
 // const updatePersonOne = increasePersonAge(person);
 
 // function increasePersonAge(person) {
-//     const updatePerson = Object.assign({}, person);
-//     updatePerson.age += 1;
-//     return updatePerson;
+//   const updatePerson = Object.assign({}, person);
+//   updatePerson.age += 1;
+//   return updatePerson;
 // }
 
 // console.log(person);
@@ -226,6 +236,7 @@
 
 // const listNumbers = [10, 2, 23, 5, 100];
 
+// listNumbers.sort();
 // listNumbers.sort((a, b) => a - b);
 
 // console.log(listNumbers);
@@ -251,6 +262,8 @@
 // listNumbers.sort(compareNum);
 
 // console.log(listNumbers);
+
+
 
 
 
@@ -348,7 +361,7 @@
 // listFruits.sort();
 // console.log(listFruits);
 
- 
+
 // function compareWords(a, b) {
 //     if (a > b) return 1;
 //     if (a < b) return -1;
@@ -360,7 +373,7 @@
 // words.sort();
 // console.log(words);
 
- 
+
 
 // const listNumbers = [10, 2, 23, 5, 100];
 
@@ -371,8 +384,8 @@
 
 
 // function compareFunction(a, b) {
-//     if (a.name > b.name) return 1;
-//     if (a.name < b.name) return -1;
+//     if (a.age > b.age) return 1;
+//     if (a.age < b.age) return -1;
 //     return 0;
 // }
 
@@ -403,10 +416,10 @@
 // console.log(filteredNumbers);
 
 
- 
+
 // const words = ['рябина', 'ива', 'клен', 'тополь', 'черемуха'];
 
-// const longWords = words.filter((word) => word.length > 5)
+// const longWords = words.filter((word) => word.length >= 5)
 
 // console.log(longWords);
 
@@ -425,7 +438,7 @@
 
 
 
-// const topics = [
+// const tasks = [
 //   "JavaScript Basics",
 //   "Python for Beginners",
 //   "Advanced JavaScript",
@@ -438,14 +451,13 @@
 
 
 
-
 const incompleteTasks = tasks.filter((task) => !task.completed);
 
 const taskList = document.getElementById("task-list");
 
 let taskItems = "";
 
-incompleteTasks.forEach(task =>{
+incompleteTasks.forEach(task => {
   taskItems += `<li>${task.description}</li>`;
 });
 
