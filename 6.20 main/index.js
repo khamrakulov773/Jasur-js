@@ -2,25 +2,21 @@ document.getElementById("get-button").addEventListener("click", xmlGetData);
 document.getElementById("post-button").addEventListener("click", xmlPostData);
 const url = "https://6916fdfea7a34288a27f29b1.mockapi.io/api/v1/todos";
 
-
 async function fetchData() {
     try {
-
         const response = await fetch(url);
-
 
         if (!response.ok) {
             if (response.status === 401) {
-                throw new Error("Пользователь не авторизован")
+                throw new Error("Пользователь не авторизован (401)");
             } else if (response.status === 404) {
-                throw new Error(`Ресурсы не найден, ${response.status}`);
+                throw new Error("Ресурс не найден (404)");
             } else if (response.status === 500) {
-                throw new Error("ошибка ответа сервера");
+                throw new Error("Ошибка сервера (500)");
             } else {
-                throw new Error(`ошибка HTTP:, ${response.status}`)
+                throw new Error(`Ошибка HTTP: ${response.status}`);
             }
         }
-
 
         const data = await response.json();
         console.log("Данные получены:", data);
@@ -45,26 +41,27 @@ async function xmlGetData() {
             const data = request.response;
             console.log(data);
         } else {
-            console.error("ошибка при загрузки данных: ", request.statusText);
+            console.error("Ошибка при загрузке данных: ", request.statusText);
         }
     };
 
     request.onerror = () => {
         console.error("Ошибка сети");
-    }
+    };
 
     request.ontimeout = () => {
-        console.error("Запрос превысил время ожидания. Проверьте подключение к интернету");
+        console.error(
+            "Запрос превысил время ожидания. Проверьте подключение к интернету"
+        );
     };
-};
-
+}
 
 async function xmlPostData() {
     const request = new XMLHttpRequest();
 
-    request.open("POST", `url/${id}`);
+    request.open("POST", url);
 
-    request.setRequestHeader('Content-Type', "appication/json");
+    request.setRequestHeader("Content-Type", "appication/json");
 
     request.responseType = "json";
 
@@ -75,10 +72,11 @@ async function xmlPostData() {
         completed: false,
         createdAt: new Date().getTime(),
         order: 5,
-        text: "выгулить собаку",
+        text: "Выгулять собаку",
     };
 
-    request.send(JSON.stringify(dataToSend))
+    request.send(JSON.stringify(dataToSend));
+
     request.onload = () => {
         if (request.status === 201) {
             const responseData = request.response;
@@ -90,9 +88,11 @@ async function xmlPostData() {
 
     request.onerror = () => {
         console.error("Ошибка сети: не удается установить соединение с сервером");
-    }
+    };
 
     request.ontimeout = () => {
-        console.error("Запрос превысил время ожидания. Проверьте подключение к интернету");
+        console.error(
+            "Запрос превысил время ожидания. Проверьте подключение к интернету"
+        );
     };
 }

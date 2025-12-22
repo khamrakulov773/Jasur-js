@@ -33,10 +33,7 @@ export const showInfo = (message) => {
   showNotification(message, "info");
 };
 
-export const showConfirmation = async (
-  message,
-  customTitle = "Подтвердите действие"
-) => {
+export const showConfirmation = async (message, customTitle = "Подтвердите действие") => {
   const result = await Swal.fire({
     icon: "question",
     title: customTitle,
